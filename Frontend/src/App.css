@@ -1,0 +1,109 @@
+.profile{
+  background-color: #282828;
+  width: 90%;
+  height: 100px;
+  border-radius: 25px;
+  margin: 12px;
+  display: flex;
+  flex-direction:  row;
+  align-items: center;
+  justify-content: start;
+  padding-left: 40px;
+}
+
+#profilecontainer{
+
+  grid-row-start: 2;
+  grid-row-end:  3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.profileimg{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: tomato;
+}
+
+#namesolved{
+  width: 30%;
+  height: 80%;  
+  margin: 20px;
+}
+
+#emh{
+  width: 20%;
+  height: 70%;  
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+#name{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+#submissions{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+  padding-top: 5px;
+  font-size: 22px;
+
+}
+
+#easy{
+  width: 33%;
+  height: 100%;
+  background-color: #283A2E;
+  color: #2CBB5D;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25% 0% 0% 25%;
+}
+#medium{
+  width: 34%;
+  height: 100%;
+  background-color: #5E4E25;
+  color: #FFC01E;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hard{
+  width: 33%;
+  height: 100%;
+  background-color: #5A302F;
+  color: #CB413E;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0% 25% 25% 0%;
+}
+
+#total{
+  width: 70px;
+  height: 70px;  
+  margin: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: white;
+}
