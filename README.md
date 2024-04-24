@@ -1,12 +1,15 @@
 # LeetBoard
 
-A Leetcode Leaderboard website. Full Stack application build using Express, NodeJS and React.
+A Leetcode Leaderboard website. Full Stack application build using Express, NodeJS and React. ( ⚠️ WIP )
 
 ## Backend
 
-The Express server consists of two processes, `cache.js` queries the Leetcode interal GraphQL server and caches them on the disk, updating the cache every minute, while `main.js` reads the cache, and provies the API Endpoints for the server. Essentially, it translates a GraphQL API to a REST API.
+The Express server, `server.js` queries the Leetcode interal GraphQL server and caches them in memory, updating the cache every minute, and provies the API Endpoints for the server. Essentially, it translates the GraphQL API into a REST API.
 
-To use, directly run both `cache.js` and `main.js` seperately using Node, or build a docker image using the `Dockerfile`
+Currently it supports one route : `/user/{username}` 
+
+To use, directly configure and run `server.js` using Node, or build a docker image using the `Dockerfile`
+
 
 ## Frontend
 

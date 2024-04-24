@@ -6,9 +6,9 @@ export default function ProfileContainer(props){
 
     const [ userData, setUserData ] = useState([])
 
-    // const APIEndpoint = 'http://13.232.225.142:3000/user-profile'
+    // const APIEndpoint = 'http://13.232.225.142:3000/user-profile/'
     // const APIEndpoint = 'https://cors-anywhere.herokuapp.com/http://13.232.225.142:3000/user-profile';
-    const APIEndpoint = 'http://localhost:3000/user-profile/'
+    const APIEndpoint = 'http://localhost:3000/user/'
     useEffect( () => {
         props.users.forEach(user => {
 
