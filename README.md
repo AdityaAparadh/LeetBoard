@@ -10,4 +10,4 @@ To use, directly run both `cache.js` and `main.js` seperately using Node, or bui
 
 ## Frontend
 
-Build with React, fetches data and displays data from above server 
+Built with React, fetches data and displays data from above server 
