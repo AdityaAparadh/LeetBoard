@@ -1,6 +1,13 @@
 const Header = () => {
 
-    
+    return(
+        <div id="header">
+
+            LeetBoard
+
+
+        </div>
+    )
 
 
 }

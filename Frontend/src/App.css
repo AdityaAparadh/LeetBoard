@@ -1,109 +1,220 @@
-.profile{
-  background-color: #282828;
-  width: 90%;
-  height: 100px;
-  border-radius: 25px;
-  margin: 12px;
-  display: flex;
-  flex-direction:  row;
-  align-items: center;
-  justify-content: start;
-  padding-left: 40px;
-}
-
-#profilecontainer{
-
-  grid-row-start: 2;
-  grid-row-end:  3;
-  grid-column-start: 2;
-  grid-column-end: 3;
+/* Main container styling for larger screens */
+#profilecontainer {
+  background-color: rgba(40,40,40,0.6);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  height: fit-content;
+  width: 50vw;
+  margin-top: 2rem;
+  margin-left: 20%;
+  margin-right: auto;
+  /* padding: 1rem; */
 }
 
-.profileimg{
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: tomato;
-}
-
-#namesolved{
-  width: 30%;
-  height: 80%;  
-  margin: 20px;
-}
-
-#emh{
-  width: 20%;
-  height: 70%;  
-  margin: 20px;
+/* Profile styling */
+.profile {
+  width: 100%;
+  height: 6rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 5%;
+  text-decoration: none;
+  transition: background-color 500ms;
+  border-radius: 10px;
 }
 
-#name{
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+.profile:hover {
+  background-color: #424242;
+}
+
+/* Profile image container styling */
+#profileimgcontainer {
+  width: 7%;
+}
+
+.profileimg {
+  width: 100%;
+  border-radius: 50%;
+  background-color: #464646;
+}
+
+/* Name and solved problems container styling */
+#namesolved {
+  width: 30%;
+  height: 80%;
+  margin: 1rem;
+}
+
+.gold, .silver, .bronze {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 4s infinite;
+}
+
+.gold { background-color: #FFD700; }
+.silver { background-color: #88b5ca; }
+.bronze { background-color: #CD7F32; }
+
+/* Easy, Medium, Hard problem count styling */
+#emh {
+  width: 30%;
+  height: 70%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#name {
   color: white;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
-#submissions{
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+#submissions {
+  font-size: 1rem;
   color: white;
-  padding-top: 5px;
-  font-size: 22px;
-
+  padding-top: 0.5rem;
 }
 
-#easy{
+/* Problem difficulty styling */
+#easy, #medium, #hard {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#easy {
   width: 33%;
   height: 100%;
   background-color: #283A2E;
   color: #2CBB5D;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25% 0% 0% 25%;
+  border-radius: 25% 0 0 25%;
 }
-#medium{
+
+#medium {
   width: 34%;
   height: 100%;
   background-color: #5E4E25;
   color: #FFC01E;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-#hard{
+#hard {
   width: 33%;
   height: 100%;
   background-color: #5A302F;
   color: #CB413E;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0% 25% 25% 0%;
+  border-radius: 0 25% 25% 0;
 }
 
-#total{
-  width: 70px;
-  height: 70px;  
-  margin: 20px;
+/* Total problems solved container styling */
+#totalcontainer {
+  width: 7%;
+  height: 0;
+  padding-top: 7%;
+  position: relative;
+}
+
+#total {
+  height: 100%;
+  width: 100%;
   border: 1px solid white;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 0.8rem;
   color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#divider {
+  width: 80%;
+  border: 1px solid rgb(102, 102, 102);
+}
+
+#header {
+  background-color: #282828;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#index {
+  width: 2%;
+  margin-right: 3%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  #profilecontainer {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #profilecontainer {
+    width: 90vw;
+    margin-top: 1rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 10px;
+  }
+
+  .profile {
+    height: 5rem; 
+    padding-left: 6%;
+  }
+
+  #profileimgcontainer {
+    width: 10%; 
+    margin-left: 2%;
+  }
+
+  #namesolved {
+    width: 50%;
+    margin: 0.5rem; 
+  }
+
+  #name {
+    font-size: 1rem; 
+  }
+
+  #submissions {
+    font-size: 0.8rem; 
+  }
+
+  #emh {
+    width: 40%;
+    height: 70%; 
+    margin: 0.5rem; 
+    align-items: center; 
+  }
+
+  #easy, #medium, #hard {
+    font-size: 0.8rem; 
+    height: 70%; 
+  }
+
+  #index {
+    margin-right: 4%;
+  }
 }

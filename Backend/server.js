@@ -4,8 +4,9 @@ const cors = require('cors')
 const { LRUCache } = require('lru-cache');
 
 const app = express();
-const PORT =  3000;
+const PORT =  8000;
 app.use(cors({origin: 'http://localhost:5173'}))
+app.use(cors({origin: 'http://192.168.1.22:5173'}))
 
 // const userProfileCache = {};
 const userProfileCache = new LRUCache({
@@ -22,6 +23,9 @@ const fetchUserProfile = async (username) => {
     query getUserProfile($username: String!) {
       matchedUser(username: $username) {
         username
+        profile{
+          userAvatar
+        }
         submitStats: submitStatsGlobal {
           acSubmissionNum {
             difficulty

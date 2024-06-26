@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Profile from './components/Profile'
 import ProfileContainer from './components/ProfileContainer'
+import Header from './components/Header'
 
 function App() {
-  const [users, setUsers] = useState(['adityaaparadh','yashkiran2004','Quanta6']);
+  const [users, setUsers] = useState(['adityaaparadh']);
   return (
-    <>
+    < div id="app">
       <ProfileContainer users={users} />
-    </>
+    </div>
   );
 }
 
